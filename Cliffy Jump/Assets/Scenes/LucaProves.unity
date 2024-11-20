@@ -280,7 +280,7 @@ MonoBehaviour:
   - {fileID: 1498086822}
   - {fileID: 1890425514}
   - {fileID: 327698552}
-  moveSpeed: 15
+  moveSpeed: 7
   isLooping: 1
   player: {fileID: 53266907}
 --- !u!1 &87060830
