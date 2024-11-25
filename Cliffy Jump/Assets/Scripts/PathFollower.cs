@@ -21,6 +21,10 @@ public class PathFollower : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     { 
+        if (pointIndex >= Points.Length)
+        {
+            return;
+        }
 
         Vector3 targetPosition = new Vector3(Points[pointIndex].transform.position.x, transform.position.y, Points[pointIndex].transform.position.z);
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);

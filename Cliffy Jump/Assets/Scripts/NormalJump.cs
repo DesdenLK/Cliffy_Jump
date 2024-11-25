@@ -10,7 +10,7 @@ public class NormalJump : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Physics.gravity = new Vector3(0, 10 * -9.81f, 0);
+        Physics.gravity = new Vector3(0, 6 * -9.81f, 0);
     }
 
     void Update()
