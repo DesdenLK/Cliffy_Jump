@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        previousPosition = transform.position;
     }
 
     private void Jump()
@@ -48,8 +50,8 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         Vector3 horizontalMovement = new Vector3(transform.position.x - previousPosition.x, 0, transform.position.z - previousPosition.z).normalized;
-        if (Mathf.Abs(horizontalMovement.x) > Mathf.Abs(horizontalMovement.z)) horizontalMovement = new Vector3(1f,0f,0f);
-        else horizontalMovement = new Vector3(0f,0f,1f);
+        //if (Mathf.Abs(horizontalMovement.x) > Mathf.Abs(horizontalMovement.z)) horizontalMovement = new Vector3(1f,0f,0f);
+        //else horizontalMovement = new Vector3(0f,0f,1f);
         Debug.Log("Mov axis " + horizontalMovement);
         Vector3 axis = Vector3.Cross(Vector3.up, horizontalMovement);
         Debug.Log("Rotation axis " + axis);
