@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private float flipTimer = 0f;           // Timer to track flip duration
 
     private Vector3 previousPosition;
+    private Vector3 horizontalMovement;     // horizontal direction of the cube
+    private Vector3 rotationAxis;           // axis of cube rotation
 
     private void Start()
     {
@@ -46,14 +48,14 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        Vector3 horizontalMovement = new Vector3(transform.position.x - previousPosition.x, 0, transform.position.z - previousPosition.z).normalized;
-        Debug.Log("Mov axis " + horizontalMovement);
-        Vector3 axis = Vector3.Cross(Vector3.up, horizontalMovement);
-        Debug.Log("Rotation axis " + axis);
-
+        horizontalMovement = new Vector3(transform.position.x - previousPosition.x, 0, transform.position.z - previousPosition.z).normalized;
+        if (horizontalMovement.magnitude > 0.01f)
+        {
+            rotationAxis = Vector3.Cross(Vector3.up, horizontalMovement);
+        }
         // Rotate the cube forward
         float rotationAmount = rotationSpeed * Time.deltaTime;
-        transform.Rotate(axis * rotationAmount);
+        transform.Rotate(rotationAxis * rotationAmount);
 
         flipTimer += Time.deltaTime;
 
