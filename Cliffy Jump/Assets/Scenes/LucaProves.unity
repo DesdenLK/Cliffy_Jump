@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 53266908}
   - component: {fileID: 53266910}
   - component: {fileID: 53266911}
+  - component: {fileID: 53266912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -299,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 20
+  jumpRequested: 0
 --- !u!114 &53266911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +316,21 @@ MonoBehaviour:
   jumpForce: 20
   rotationSpeed: 360
   flipDuration: 0.5
+--- !u!114 &53266912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53266902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc601c592e2f2644b837a5713dad859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 53266902}
+  Points:
+  - {fileID: 560321498}
 --- !u!1 &81010240
 GameObject:
   m_ObjectHideFlags: 0
@@ -838,6 +855,37 @@ MonoBehaviour:
   riseHeight: 0
   isRising: 1
   isFinished: 0
+--- !u!1 &560321497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560321498}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560321498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560321497}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.5, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1684860242}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &570253653
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,6 +2736,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8636113243875839120, guid: 1c14055b7f9ddc94aa8b5aa3fa3d488e, type: 3}
   m_PrefabInstance: {fileID: 1615460541}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1684860241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684860242}
+  m_Layer: 0
+  m_Name: AutoJump
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1684860242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684860241}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 560321498}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1703226697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3810,3 +3890,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1526964668}
+  - {fileID: 1684860242}

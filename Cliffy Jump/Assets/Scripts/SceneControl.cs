@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SceneControl : MonoBehaviour
@@ -11,6 +12,7 @@ public class SceneControl : MonoBehaviour
     void Start()
     {
         player.GetComponent<PathFollower>().enabled = false;
+        player.GetComponent<AutoJump>().enabled = false;
 
         PathRise = Ground.GetComponent<PathRise>();
     }
@@ -30,5 +32,10 @@ public class SceneControl : MonoBehaviour
     void Update()
     {
         if (!playerInit) initPlayer();
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            player.GetComponent<AutoJump>().enabled = true;
+            Debug.Log("AutoJump enabled");
+        }
     }
 }

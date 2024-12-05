@@ -4,7 +4,7 @@ public class NormalJump : MonoBehaviour
 {
     public float jumpForce = 10f;
     private bool isGrounded = true;
-    private bool jumpRequested = false; // Señal para el salto
+    public bool jumpRequested = false; // Señal para el salto
     private Rigidbody rb;
 
     void Start()
@@ -21,6 +21,11 @@ public class NormalJump : MonoBehaviour
         {
             jumpRequested = true;
         }
+    }
+
+    public void Jump()
+    {
+        jumpRequested = true;
     }
 
     void FixedUpdate()
