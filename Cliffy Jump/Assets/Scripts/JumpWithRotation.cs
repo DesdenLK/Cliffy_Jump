@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class JumpWithRotation : MonoBehaviour
 {
     public float jumpForce = 10f;            // Force of the jump
     public float rotationSpeed = 360f;      // Speed of the flip rotation (degrees per second)

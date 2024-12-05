@@ -15,6 +15,7 @@ public class NormalJump : MonoBehaviour
 
     void Update()
     {
+
         // Detecta la entrada del usuario
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -31,14 +32,15 @@ public class NormalJump : MonoBehaviour
             isGrounded = false;
             jumpRequested = false;
         }
+
+        CheckGrounded(); // Comprueba si el jugador está en el suelo
     }
 
-    void OnCollisionEnter(Collision collision)
+    void CheckGrounded()
     {
-        // Detecta si el personaje está en el suelo
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
+        float groundCheckDistance = 0.55f; // Distancia para detectar el suelo
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
+
+
 }
