@@ -30,4 +30,9 @@ public class AutoJump : MonoBehaviour
             pointIndex++;
         }
     }
+
+    public void initAutoJump()
+    {
+        pointIndex = 0;
+    }
 }

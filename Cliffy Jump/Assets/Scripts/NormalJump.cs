@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class NormalJump : MonoBehaviour
 {
     public float jumpForce = 10f;
     private bool isGrounded = true;
-    public bool jumpRequested = false; // Señal para el salto
+    public bool jumpRequested = false; // Seï¿½al para el salto
     private Rigidbody rb;
 
     void Start()
@@ -17,7 +18,7 @@ public class NormalJump : MonoBehaviour
     {
 
         // Detecta la entrada del usuario
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown((int)MouseButton.Left)) && isGrounded)
         {
             jumpRequested = true;
         }
@@ -30,7 +31,7 @@ public class NormalJump : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Aplica la física del salto
+        // Aplica la fï¿½sica del salto
         if (jumpRequested)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
@@ -38,7 +39,7 @@ public class NormalJump : MonoBehaviour
             jumpRequested = false;
         }
 
-        CheckGrounded(); // Comprueba si el jugador está en el suelo
+        CheckGrounded(); // Comprueba si el jugador estï¿½ en el suelo
     }
 
     void CheckGrounded()
@@ -46,6 +47,4 @@ public class NormalJump : MonoBehaviour
         float groundCheckDistance = 0.55f; // Distancia para detectar el suelo
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
     }
-
-
 }
