@@ -11,6 +11,7 @@ public class SceneControl : MonoBehaviour
     public GameObject[] miniLevels; 
 
     private PathRise PathRise;
+    private PathFalling PathFalling;
     private GameObject Ground;
 
     private int indexLevel = 0;
@@ -20,9 +21,7 @@ public class SceneControl : MonoBehaviour
     {
         player.GetComponent<PathFollower>().enabled = false;
         player.GetComponent<AutoJump>().enabled = false;
-        Ground = miniLevels[indexLevel].transform.Find("Ground").gameObject;
-        Debug.Log(Ground);
-        PathRise = Ground.GetComponent<PathRise>();
+        initGround();
 
         miniLevels[indexLevel].SetActive(true);
     }
@@ -39,6 +38,7 @@ public class SceneControl : MonoBehaviour
         player.GetComponent<AutoJump>().enabled = player.GetComponent<AutoJump>().enabled;
 
         player.GetComponent<PathFollower>().initPathFollower();
+        GetComponent<Distance_Percentage>().setPlayerPosition(player.transform);
         player.GetComponent<AutoJump>().initAutoJump();
 
         if (PathRise != null)
@@ -47,6 +47,7 @@ public class SceneControl : MonoBehaviour
             {
                 player.GetComponent<PathFollower>().enabled = true;
                 playerInit = true;
+                PathRise.enabled = false;
                 Debug.Log("Player initialized");
             }
         }
@@ -59,19 +60,22 @@ public class SceneControl : MonoBehaviour
         else
         {
             if (player.GetComponent<PathFollower>().isPlayerFinished())
-            {
-                miniLevels[indexLevel].SetActive(false);
-                indexLevel++;
-                if (indexLevel < miniLevels.Length)
+            {   
+                PathFalling.enabled = true;
+                if (PathFalling != null && PathFalling.isItFinished())
                 {
-                    miniLevels[indexLevel].SetActive(true);
-                    Ground = miniLevels[indexLevel].transform.Find("Ground").gameObject;
-                    PathRise = Ground.GetComponent<PathRise>();
-                    playerInit = false;
-                }
-                else
-                {
-                    Debug.Log("Game Over");
+                    miniLevels[indexLevel].SetActive(false);
+                    indexLevel++;
+                    if (indexLevel < miniLevels.Length)
+                    {
+                        miniLevels[indexLevel].SetActive(true);
+                        initGround();
+                        playerInit = false;
+                    }
+                    else
+                    {
+                        Debug.Log("Game Over");
+                    }
                 }
             }
         }
@@ -84,6 +88,16 @@ public class SceneControl : MonoBehaviour
             player.GetComponent<AutoJump>().enabled = true;
             Debug.Log("AutoJump enabled");
         }
+    }
+
+    void initGround()
+    {
+        Ground = miniLevels[indexLevel].transform.Find("Ground").gameObject;
+        Debug.Log(Ground);
+        PathRise = Ground.GetComponent<PathRise>();
+        PathFalling = Ground.GetComponent<PathFalling>();
+        PathFalling.enabled = false;
+
     }
 
     Transform[] getChildrenTransform(GameObject parent)

@@ -12,6 +12,7 @@ public class AutoJump : MonoBehaviour
     void Start()
     {
         normalJump = player.GetComponent<NormalJump>();
+        pointIndex = getClosestPoint();
     }
 
     // Update is called once per frame
@@ -34,5 +35,21 @@ public class AutoJump : MonoBehaviour
     public void initAutoJump()
     {
         pointIndex = 0;
+    }
+
+    private int getClosestPoint()
+    {
+        float minDistance = Mathf.Infinity;
+        int index = 0;
+        for (int i = 0; i < Points.Length; i++)
+        {
+            float distance = Vector3.Distance(transform.position, Points[i].transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                index = i;
+            }
+        }
+        return index;
     }
 }
