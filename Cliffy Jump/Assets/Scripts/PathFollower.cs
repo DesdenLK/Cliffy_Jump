@@ -8,7 +8,7 @@ public class PathFollower : MonoBehaviour
 
     private int pointIndex;
 
-    public bool isLooping = false;
+    public bool playerFinished = false;
 
     public Rigidbody player;
 
@@ -36,10 +36,24 @@ public class PathFollower : MonoBehaviour
 
         if (pointIndex == Points.Length)
         {
-            if (isLooping)
-            {
-                pointIndex = 0;
-            }
+            playerFinished = true;
         }
+    }
+
+    public bool isPlayerFinished()
+    {
+        return playerFinished;
+    }
+
+    public void setPlayerFinished(bool value)
+    {
+        playerFinished = value;
+    }
+
+    public void initPathFollower()
+    {
+        pointIndex = 0;
+        transform.position = Points[pointIndex].transform.position;
+        playerFinished = false;
     }
 }
