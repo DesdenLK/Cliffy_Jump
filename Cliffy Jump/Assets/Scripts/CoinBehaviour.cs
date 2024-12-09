@@ -5,6 +5,8 @@ public class CoinBehaviour : MonoBehaviour
     //private GameObject coin;
     private Vector3 rotationAxis;
     private float rotationSpeed;
+    public GameObject disappearEffectPrefab;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,10 @@ public class CoinBehaviour : MonoBehaviour
     void OnTriggerEnter(Collider collision) {
         if (collision.tag == "Player") 
         {
+            if (disappearEffectPrefab != null) 
+            {
+                Instantiate(disappearEffectPrefab, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
     }
