@@ -14,13 +14,15 @@ public class SceneControl : MonoBehaviour
     private PathFalling PathFalling;
     private GameObject Ground;
 
+    private AutoJump AutoJump;
+
     private int indexLevel = 0;
 
     bool playerInit = false;
     void Start()
     {
         player.GetComponent<PathFollower>().enabled = false;
-        player.GetComponent<AutoJump>().enabled = false;
+        AutoJump = player.GetComponent<AutoJump>();
         initGround();
 
         miniLevels[indexLevel].SetActive(true);
@@ -29,7 +31,7 @@ public class SceneControl : MonoBehaviour
     public void Reset()
     {
         player.GetComponent<PathFollower>().enabled = false;
-        player.GetComponent<AutoJump>().enabled = false;
+        
         playerInit = false;
         indexLevel = 0;
         miniLevels[indexLevel].SetActive(true);
@@ -46,7 +48,6 @@ public class SceneControl : MonoBehaviour
         player.GetComponent<AutoJump>().Points = autoJump;
 
         player.GetComponent<PathFollower>().enabled = false;
-        player.GetComponent<AutoJump>().enabled = player.GetComponent<AutoJump>().enabled;
 
         player.GetComponent<PathFollower>().initPathFollower();
         GetComponent<Distance_Percentage>().setPlayerPosition(player.transform);
@@ -96,8 +97,8 @@ public class SceneControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            player.GetComponent<AutoJump>().enabled = true;
-            Debug.Log("AutoJump enabled");
+            AutoJump.setAutoJump(!AutoJump.getAutoJump());
+            Debug.Log("AutoJump " + AutoJump.getAutoJump());
         }
     }
 
