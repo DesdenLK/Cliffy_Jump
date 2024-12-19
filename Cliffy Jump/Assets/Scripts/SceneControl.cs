@@ -26,6 +26,17 @@ public class SceneControl : MonoBehaviour
         miniLevels[indexLevel].SetActive(true);
     }
 
+    public void Reset()
+    {
+        player.GetComponent<PathFollower>().enabled = false;
+        player.GetComponent<AutoJump>().enabled = false;
+        playerInit = false;
+        indexLevel = 0;
+        miniLevels[indexLevel].SetActive(true);
+        initGround();
+        GetComponent<Distance_Percentage>().resetDistance();
+    }
+
     void initPlayer()
     {
         Transform[] path = getChildrenTransform(miniLevels[indexLevel].transform.Find("PointsPath").gameObject);

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Distance_Percentage : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Distance_Percentage : MonoBehaviour
 
     public GameObject[] miniLevels;
     public GameObject player;
+    public Text percentageText;
 
     private float totalDistance = 0;
     private float currentDistance = 0;
@@ -21,6 +23,12 @@ public class Distance_Percentage : MonoBehaviour
         lastPosition = player.transform.position;
     }
 
+    public void resetDistance()
+    {
+        currentDistance = 0;
+        lastPosition = player.transform.position;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -29,9 +37,10 @@ public class Distance_Percentage : MonoBehaviour
         currentDistance += Vector3.Distance(temp1, temp2);
         lastPosition = player.transform.position;
         percentage = (float)Math.Round((currentDistance / totalDistance) * 100, 1);
-        Debug.Log("Percentage: " + percentage);
-        Debug.Log("Current Distance: " + currentDistance);
-        Debug.Log("Total Distance: " + totalDistance);
+        percentageText.text = "Percentage: " + percentage + "%";
+        //Debug.Log("Percentage: " + percentage);
+        //Debug.Log("Current Distance: " + currentDistance);
+        //Debug.Log("Total Distance: " + totalDistance);
     }
 
     float getTotalDistance(GameObject parent)
