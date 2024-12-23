@@ -17,6 +17,7 @@ public class SceneControl : MonoBehaviour
     private AutoJump AutoJump;
 
     private int indexLevel = 0;
+    private float[] percentages = new float[2];
 
     bool playerInit = false;
     void Start()
@@ -26,6 +27,7 @@ public class SceneControl : MonoBehaviour
         initGround();
 
         miniLevels[indexLevel].SetActive(true);
+        LoadArrayFromPlayerPrefs();
     }
 
     public void Reset()
@@ -86,6 +88,7 @@ public class SceneControl : MonoBehaviour
                     }
                     else
                     {
+                        setPercentage(100f);
                         Debug.Log("Game Over");
                     }
                 }
@@ -120,5 +123,48 @@ public class SceneControl : MonoBehaviour
             childTransforms.Add(child);
         }
         return childTransforms.ToArray();
+    }
+
+    private void SaveArrayToPlayerPrefs()
+    {
+        string arrayString = string.Join("/", System.Array.ConvertAll(percentages, x => x.ToString("F1", System.Globalization.CultureInfo.InvariantCulture)));
+        PlayerPrefs.SetString("percentages", arrayString);
+        PlayerPrefs.Save();
+    }
+
+
+    private void LoadArrayFromPlayerPrefs()
+    {
+        if (PlayerPrefs.HasKey("percentages"))
+        {
+            string arrayString = PlayerPrefs.GetString("percentages");
+            Debug.Log("Loaded percentages: " + arrayString);
+
+            string[] stringArray = arrayString.Split('/');
+            for (int i = 0; i < stringArray.Length; i++)
+            {
+
+                if (float.TryParse(stringArray[i], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float parsedValue))
+                {
+                    percentages[i] = parsedValue;
+                }
+                else
+                {
+                    Debug.LogWarning("Invalid percentage value found: " + stringArray[i]);
+                    percentages[i] = 0.0f;
+                }
+            }
+        }
+    }
+
+    public void setPercentage(float percentage)
+    {
+        percentages[PlayerPrefs.GetInt("level")] = percentage;
+        SaveArrayToPlayerPrefs();
+    }
+
+    public float getPercentage()
+    {
+        return percentages[PlayerPrefs.GetInt("level")];
     }
 }

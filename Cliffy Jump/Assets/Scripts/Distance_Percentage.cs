@@ -14,6 +14,7 @@ public class Distance_Percentage : MonoBehaviour
     private float currentDistance = 0;
     private float percentage = 0;
     private Vector3 lastPosition = new Vector3();
+
     void Start()
     {
         for (int i = 0; i < miniLevels.Length; i++)

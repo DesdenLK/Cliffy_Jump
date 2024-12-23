@@ -29,13 +29,10 @@ public class AutoJump : MonoBehaviour
         Vector3 pointPos = new Vector3(Points[pointIndex].position.x, 0, Points[pointIndex].position.z);
         float distance = Vector3.Distance(playerPos, pointPos);
         //Debug.Log("Distance: " + distance);
-        Debug.Log("Point index: " + pointIndex);
         if (distance < 0.1f)
         {
-            Debug.Log("Point reached " + pointIndex);
             if (autojump)
             {
-                Debug.Log("Jumping");
                 normalJump.Jump();
             }
             pointIndex++;

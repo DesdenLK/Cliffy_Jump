@@ -4,7 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 9069bc984ad9e584ba157214281e26f5
+  - enabled: 1
+    path: Assets/Scenes/LevelMenu.unity
+    guid: 959e142eebaa6bb458b0bc77ad2ae84a
+  - enabled: 1
+    path: Assets/Scenes/LucaProves.unity
+    guid: 63fe26fc88f90a042b59b93f9320cd8a
+  - enabled: 1
+    path: Assets/Scenes/AlbertProves.unity
+    guid: 08fe6dbdbedb3804699903ffc94ab720
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
