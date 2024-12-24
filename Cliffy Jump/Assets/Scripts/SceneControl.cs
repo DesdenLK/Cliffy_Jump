@@ -93,6 +93,7 @@ public class SceneControl : MonoBehaviour
                     {
                         setPercentage(100f);
                         Debug.Log("Game Over");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelPassed");
                     }
                 }
             }

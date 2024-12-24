@@ -23,7 +23,8 @@ public class ObjectCollision : MonoBehaviour
             {
                 SceneControl.setPercentage(percentage);
             }
-            SceneControl.Reset();
+            PlayerPrefs.SetFloat("percentage", percentage);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelFailed");
         }
     }
 
