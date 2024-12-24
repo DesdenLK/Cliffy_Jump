@@ -5,7 +5,8 @@ using UnityEngine;
 public class SceneControl : MonoBehaviour
 {
    
-    public GameObject player;
+    public GameObject[] players;
+    private GameObject player;
 
 
     public GameObject[] miniLevels; 
@@ -22,6 +23,8 @@ public class SceneControl : MonoBehaviour
     bool playerInit = false;
     void Start()
     {
+        player = players[PlayerPrefs.GetInt("player")];
+        player.SetActive(true);
         player.GetComponent<PathFollower>().enabled = false;
         AutoJump = player.GetComponent<AutoJump>();
         initGround();
@@ -166,5 +169,10 @@ public class SceneControl : MonoBehaviour
     public float getPercentage()
     {
         return percentages[PlayerPrefs.GetInt("level")];
+    }
+
+    public GameObject getPlayer()
+    {
+        return player;
     }
 }

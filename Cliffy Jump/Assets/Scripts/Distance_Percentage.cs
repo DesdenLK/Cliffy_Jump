@@ -7,8 +7,10 @@ public class Distance_Percentage : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public GameObject[] miniLevels;
-    public GameObject player;
     public Text percentageText;
+
+    private SceneControl sceneControl;
+    private GameObject player;
 
     private float totalDistance = 0;
     private float currentDistance = 0;
@@ -17,6 +19,8 @@ public class Distance_Percentage : MonoBehaviour
 
     void Start()
     {
+        sceneControl = GameObject.Find("SceneManager").GetComponent<SceneControl>();
+        player = sceneControl.getPlayer();
         for (int i = 0; i < miniLevels.Length; i++)
         {
             totalDistance += getTotalDistance(miniLevels[i].transform.Find("PointsPath").gameObject);

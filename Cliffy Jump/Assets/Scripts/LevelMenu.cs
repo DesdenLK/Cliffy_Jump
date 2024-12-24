@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class LevelMenu : MonoBehaviour
 {
     public Dropdown levelDropdown;
+    public Dropdown selectPlayer;
     public Image levelImage;
     public Sprite[] levelSprite;
     public Text percentageText;
@@ -53,6 +54,13 @@ public class LevelMenu : MonoBehaviour
 
         percentageText.text = "Percentage: " + percentages[selectedOption] + "%";
 
+    }
+
+    public void checkPlayerSelected()
+    {
+        int selectedOption = selectPlayer.value;
+        selectPlayer.value = selectedOption;
+        PlayerPrefs.SetInt("player", selectedOption);
     }
 
     private void SaveArrayToPlayerPrefs()
