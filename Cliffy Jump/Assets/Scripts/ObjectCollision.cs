@@ -1,17 +1,31 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ObjectCollision : MonoBehaviour
 {
     public GameObject SceneManager;
     private SceneControl SceneControl;
     private Distance_Percentage Distance_Percentage;
+    public ParticleSystem particles;
+    public Animator Animator;
+
+    private bool particlesPlayed = false;
 
 
-    private void Start()
+    void Start()
     {
         SceneControl = SceneManager.GetComponent<SceneControl>();
         Distance_Percentage = SceneManager.GetComponent<Distance_Percentage>();
     }
+
+    void Update()
+    {
+        if (particles != null && !particles.IsAlive() && particlesPlayed)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelFailed");
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         // Verifica si el objeto tiene el tag "Object"
@@ -24,7 +38,17 @@ public class ObjectCollision : MonoBehaviour
                 SceneControl.setPercentage(percentage);
             }
             PlayerPrefs.SetFloat("percentage", percentage);
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LevelFailed");
+            if (particles != null)
+            {
+                particles.Play();
+                particlesPlayed = true;
+            }
+            if (Animator != null)
+            {
+                Animator.SetTrigger("Destroy");
+            }
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("LevelFailed");
+
         }
     }
 

@@ -15,7 +15,9 @@ public class PathFollower : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = Points[pointIndex].transform.position;
+        pointIndex = 0;
+        if (Points.Length > 0)
+            transform.position = Points[pointIndex].transform.position;
     }
 
     // Update is called once per frame
