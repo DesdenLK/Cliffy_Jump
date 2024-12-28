@@ -17,6 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlbertProves.unity
     guid: 08fe6dbdbedb3804699903ffc94ab720
+  - enabled: 1
+    path: Assets/Scenes/LevelPassed.unity
+    guid: c6beb000eb0d7134e98431078142f383
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 75dd986f0671ec44face8f6836495864
+  - enabled: 1
+    path: Assets/Scenes/LevelFailed.unity
+    guid: 7b81762f1d1a79b43b9d65fbbbe3f265
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
