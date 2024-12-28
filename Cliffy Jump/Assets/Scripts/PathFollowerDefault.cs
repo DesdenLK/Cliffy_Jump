@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PathFollower : MonoBehaviour
+public class PathFollowerDefault : MonoBehaviour
 {
     public Transform[] Points;
 
