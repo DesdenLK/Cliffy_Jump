@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DestroyPenguin
+  m_Name: Destroy
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -33,7 +33,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -54,7 +54,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -75,7 +75,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -105,7 +105,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -123,10 +123,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -144,10 +153,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -165,10 +183,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -198,7 +225,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -216,10 +243,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -237,10 +273,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -258,10 +303,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -291,7 +345,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -306,7 +360,7 @@ AnimationClip:
     genericBindings:
     - serializedVersion: 2
       path: 1076774170
-      attribute: 2108656497
+      attribute: 1941764792
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -315,7 +369,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 83347502
-      attribute: 2108656497
+      attribute: 1941764792
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -324,7 +378,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4277728589
-      attribute: 2108656497
+      attribute: 1941764792
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -333,7 +387,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1076774170
-      attribute: 1303350129
+      attribute: 1136458424
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -342,7 +396,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1076774170
-      attribute: 1571785585
+      attribute: 1404893880
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -351,7 +405,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1076774170
-      attribute: 1840221041
+      attribute: 1673329336
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -360,7 +414,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 83347502
-      attribute: 1303350129
+      attribute: 1136458424
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -369,7 +423,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 83347502
-      attribute: 1571785585
+      attribute: 1404893880
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -378,7 +432,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 83347502
-      attribute: 1840221041
+      attribute: 1673329336
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -387,7 +441,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4277728589
-      attribute: 1303350129
+      attribute: 1136458424
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -396,7 +450,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4277728589
-      attribute: 1571785585
+      attribute: 1404893880
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -405,7 +459,7 @@ AnimationClip:
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4277728589
-      attribute: 1840221041
+      attribute: 1673329336
       script: {fileID: 0}
       typeID: 23
       customType: 22
@@ -450,7 +504,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -471,7 +525,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -492,7 +546,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -522,7 +576,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/Body
     classID: 23
     script: {fileID: 0}
@@ -540,10 +594,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -561,10 +624,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -582,10 +654,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -615,7 +696,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/WingL
     classID: 23
     script: {fileID: 0}
@@ -633,10 +714,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.r
+    attribute: material._BaseColor.r
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -654,10 +744,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.g
+    attribute: material._BaseColor.g
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -675,10 +774,19 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 2
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.b
+    attribute: material._BaseColor.b
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}
@@ -708,7 +816,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.a
+    attribute: material._BaseColor.a
     path: Penguin/WingR
     classID: 23
     script: {fileID: 0}

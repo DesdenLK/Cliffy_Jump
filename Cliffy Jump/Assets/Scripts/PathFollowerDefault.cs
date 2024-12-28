@@ -17,7 +17,7 @@ public class PathFollowerDefault : MonoBehaviour
     {
         pointIndex = 0;
         if (Points.Length > 0)
-            transform.position = Points[pointIndex].transform.position;
+            transform.position = new Vector3 (Points[pointIndex].transform.position.x, transform.position.y, Points[pointIndex].transform.position.z);
     }
 
     // Update is called once per frame
