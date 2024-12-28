@@ -9,11 +9,14 @@ public class ObjectCollision : MonoBehaviour
     public ParticleSystem particles;
     public Animator Animator;
 
+    private PathFollower PathFollower;
+
     private bool particlesPlayed = false;
 
 
     void Start()
     {
+        PathFollower = GetComponent<PathFollower>();
         SceneControl = SceneManager.GetComponent<SceneControl>();
         Distance_Percentage = SceneManager.GetComponent<Distance_Percentage>();
     }
@@ -31,6 +34,7 @@ public class ObjectCollision : MonoBehaviour
         // Verifica si el objeto tiene el tag "Object"
         if (collision.gameObject.CompareTag("Object"))
         {
+            PathFollower.enabled = false;
             float percentage = Distance_Percentage.getPercentage();
             Debug.Log("Percentage: " + percentage);
             if (percentage > SceneControl.getPercentage())

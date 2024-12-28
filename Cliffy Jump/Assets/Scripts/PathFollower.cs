@@ -17,8 +17,8 @@ public class PathFollower : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        transform.position = Points[pointIndex].transform.position;
         arcadeJump = GetComponent<ArcadeJump>();
+        Debug.Log(arcadeJump);
         Physics.gravity = new Vector3(0, -9.81f, 0);
         pointIndex = 0;
         if (Points.Length > 0)
