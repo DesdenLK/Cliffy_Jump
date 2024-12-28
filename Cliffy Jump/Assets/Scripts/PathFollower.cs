@@ -1,7 +1,11 @@
 using UnityEngine;
 
+
+
 public class PathFollower : MonoBehaviour
 {
+    private ArcadeJump arcadeJump;
+
     public Transform[] Points;
 
     public float moveSpeed;
@@ -10,34 +14,44 @@ public class PathFollower : MonoBehaviour
 
     public bool playerFinished = false;
 
-    public Rigidbody player;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = Points[pointIndex].transform.position;
+        arcadeJump = GetComponent<ArcadeJump>();
+        pointIndex = 0;
+        Physics.gravity = new Vector3(0, -9.81f, 0);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+
+    void Update()
     { 
-        if (pointIndex >= Points.Length)
+        
+        if (pointIndex < Points.Length)
         {
-            return;
+            bool isJumping = arcadeJump.IsJumping;
+            if (!isJumping) {
+                Vector3 targetPosition = new Vector3(Points[pointIndex].transform.position.x, transform.position.y, Points[pointIndex].transform.position.z);
+
+                // Look at the moving direction of the player
+                Vector3 relativePos = targetPosition - transform.position;
+                Quaternion rotation = Quaternion.LookRotation(relativePos, new Vector3(0f,1f,0f));
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 40f*Time.deltaTime);
+                // Move towards next point
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            }
+
+            if (transform.position.x == Points[pointIndex].transform.position.x && transform.position.z == Points[pointIndex].transform.position.z)
+            {
+                pointIndex++;
+            }
+
+            if (pointIndex == Points.Length)
+            {
+                playerFinished = true;
+            }
         }
 
-        Vector3 targetPosition = new Vector3(Points[pointIndex].transform.position.x, transform.position.y, Points[pointIndex].transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.fixedDeltaTime);
-
-        if (transform.position.x == Points[pointIndex].transform.position.x && transform.position.z == Points[pointIndex].transform.position.z)
-        {
-            pointIndex++;
-        }
-
-        if (pointIndex == Points.Length)
-        {
-            playerFinished = true;
-        }
     }
 
     public bool isPlayerFinished()

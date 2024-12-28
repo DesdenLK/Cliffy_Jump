@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Object
   - Star
+  - Barrel
   layers:
   - Default
   - TransparentFX
