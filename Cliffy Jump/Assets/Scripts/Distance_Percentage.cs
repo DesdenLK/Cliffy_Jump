@@ -39,9 +39,8 @@ public class Distance_Percentage : MonoBehaviour
     void Update()
     {
         Vector3 temp1 = new Vector3(lastPosition.x, 0, lastPosition.z);
-        Vector3 temp2 = new Vector3(player.transform.transform.position.x, 0, player.transform.position.z);
+        Vector3 temp2 = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         currentDistance += Vector3.Distance(temp1, temp2);
-        Debug.Log("Current Distance: " + currentDistance);
         lastPosition = player.transform.position;
         percentage = (float)Math.Round((currentDistance / totalDistance) * 100, 1);
         percentageText.text = "Percentage: " + percentage + "%";
