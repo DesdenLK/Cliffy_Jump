@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5863469646657528575
+--- !u!114 &-306990968857433575
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,15 +23,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlayerMat
+  m_Name: Brown_1
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_Parent: {fileID: 2100000, guid: 08a9c3cb68f9dd948a661701be1d7b5f, type: 2}
+  m_Parent: {fileID: 2100000, guid: bd6a107be7cb3c84da2644184596d722, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   - _NORMALMAP_TANGENT_SPACE
-  m_InvalidKeywords:
-  - _ALPHAPREMULTIPLY_ON
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -49,14 +48,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _GlossMapScale: 0
-    - _Glossiness: 0
-    - _MetallicRemapMax: 1
-    - _Mode: 3
-    - _Smoothness: 0
-    - _SmoothnessRemapMax: 0
+    - _MetallicRemapMax: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.95283014, g: 0.82843953, b: 0.35506397, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
