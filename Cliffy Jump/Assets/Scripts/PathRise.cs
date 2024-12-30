@@ -10,7 +10,7 @@ public class PathRise : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(transform.position.x, -7, transform.position.z);
+        transform.position = new Vector3(transform.position.x, -12, transform.position.z);
     }
 
     // Update is called once per frame
