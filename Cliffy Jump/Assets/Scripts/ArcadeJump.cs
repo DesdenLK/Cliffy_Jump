@@ -3,9 +3,7 @@ using UnityEngine;
 public class ArcadeJump : MonoBehaviour
 {
     public float jumpForce;        // Velocidad inicial del salto
-    //public float fallMultiplier = 3f;   // Velocidad de caida aumentada
-    public float maxJumpHeight;    // Altura maxima que puede alcanzar el salto
-    public float moveSpeed;
+    public float fallMultiplier;   // Velocidad de caida aumentada
 
     public float frontFlipStartHeight;
     public float frontFlipTime;      // en segundos
@@ -13,7 +11,7 @@ public class ArcadeJump : MonoBehaviour
 
     private bool isGrounded = true;     // Si el objeto esta en el suelo
     private bool isJumping = false;     // Si esta en pleno salto
-    private bool isFrontFlipping = false;
+    private bool isFrontFlipping = false;   // true si esta haciendo frontflip
     private bool flipAvailable = true;      // true si esta jumping y no ha empezado el flip o si esta en el suelo
 
     private Rigidbody rb;               // Referencia al Rigidbody
@@ -25,9 +23,9 @@ public class ArcadeJump : MonoBehaviour
 
     private float angleRotations;
 
-    public bool IsJumping
+    public bool IsFrontFlipping
     {
-        get { return isJumping; }
+        get { return isFrontFlipping; }
     }
 
 
@@ -45,10 +43,7 @@ public class ArcadeJump : MonoBehaviour
         isGrounded = false;             // Ya no esta en el suelo
         isJumping = true;               // Empieza a saltar
         initialY = transform.position.y; // Guarda la posicion inicial
-        //rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z); // Asigna velocidad inicial
-        Vector3 forwardSpeed = transform.forward.normalized * moveSpeed;
-        rb.linearVelocity = new Vector3(forwardSpeed.x, 0, forwardSpeed.z);
-        rb.AddForce(new Vector3(0f, jumpForce, 0f), ForceMode.Impulse);
+        rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
     }
 
 
@@ -72,12 +67,26 @@ public class ArcadeJump : MonoBehaviour
 
     void Update()
     {
-        if (isFrontFlipping) FrontFlipAction();
-        // Detecta salto solo si esta en el suelo
+        // Inicio salto
         if (isGrounded && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             Jump();
         }
+
+        // Control de velocidad lineal en eje y (vertical)
+        float yVelocity = rb.linearVelocity.y;
+
+        // En el aire una vez ha hecho el flip
+        if (isJumping && !isFrontFlipping && !flipAvailable) 
+        {
+            yVelocity = Physics.gravity.y * fallMultiplier;
+        }
+        else if (isGrounded) yVelocity = 0;
+        if (isJumping) rb.linearVelocity = new Vector3(0, yVelocity, 0);
+
+
+        // Control de front flip
+        if (isFrontFlipping) FrontFlipAction();
 
         // Empieza front flip
         if (isJumping && !isFrontFlipping && flipAvailable && transform.position.y >= initialY + frontFlipStartHeight)
@@ -91,15 +100,23 @@ public class ArcadeJump : MonoBehaviour
     }
 
 
+    /*void UpdateGrounded()
+    {
+        float groundCheckDistance = 0.05f; // Distancia para detectar el suelo
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
+    }*/
+
+
     void OnCollisionEnter(Collision collision)
     {
         // Detecta si el objeto toca el suelo
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") && !isGrounded)
         {
             isGrounded = true;
             isJumping = false;
             isFrontFlipping = false;
             flipAvailable = true;
+            Debug.Log("Ground");
         }
     }
 }
