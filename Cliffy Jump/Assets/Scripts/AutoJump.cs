@@ -10,10 +10,10 @@ public class AutoJump : MonoBehaviour
     private int pointIndex;
     private bool autojump = false;
 
-    private NormalJump normalJump;
+    private ArcadeJump arcadeJump;
     void Start()
     {
-        normalJump = player.GetComponent<NormalJump>();
+        arcadeJump = player.GetComponent<ArcadeJump>();
         pointIndex = 0;
     }
 
@@ -29,11 +29,11 @@ public class AutoJump : MonoBehaviour
         Vector3 pointPos = new Vector3(Points[pointIndex].position.x, 0, Points[pointIndex].position.z);
         float distance = Vector3.Distance(playerPos, pointPos);
         //Debug.Log("Distance: " + distance);
-        if (distance < 0.1f)
+        if (distance < 0.2f)
         {
             if (autojump)
             {
-                normalJump.Jump();
+                arcadeJump.Jump();
             }
             pointIndex++;
         }
