@@ -1086,6 +1086,19 @@ MonoBehaviour:
   fallMultiplier: 3
   frontFlipStartHeight: 3
   frontFlipTime: 0.25
+--- !u!114 &53266935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53266902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b77fe43331afb4aa56e13761f482c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsCollectedText: {fileID: 792686894}
 --- !u!1001 &54189900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49944,7 +49957,7 @@ MonoBehaviour:
   fallMultiplier: 1
   frontFlipStartHeight: 1
   frontFlipTime: 0.25
---- !u!114 &1990792849
+--- !u!114 &1990792864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53339,6 +53352,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1502675702301327031, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2949465393076740260, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
       propertyPath: m_Constraints
       value: 0
@@ -53387,6 +53404,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1502675702301327031, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
       insertIndex: 7
       addedObject: {fileID: 53266921}
+    - targetCorrespondingSourceObject: {fileID: 1502675702301327031, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
+      insertIndex: 11
+      addedObject: {fileID: 53266935}
   m_SourcePrefab: {fileID: 100100000, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
 --- !u!1001 &4037971261284719770
 PrefabInstance:
@@ -53557,6 +53577,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 8879371674969148420, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
@@ -53576,7 +53600,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      insertIndex: 11
+      addedObject: {fileID: 7134781240715813605}
   m_SourcePrefab: {fileID: 100100000, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
 --- !u!1001 &6487188449176441726
 PrefabInstance:
@@ -53712,6 +53739,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1889850620778455331, guid: 4de3cd8c3459718438c00e0e5217b362, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4683510950170809891, guid: 4de3cd8c3459718438c00e0e5217b362, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -53845,13 +53876,26 @@ PrefabInstance:
       addedObject: {fileID: 1990792834}
     - targetCorrespondingSourceObject: {fileID: 1889850620778455331, guid: 4de3cd8c3459718438c00e0e5217b362, type: 3}
       insertIndex: 12
-      addedObject: {fileID: 1990792849}
+      addedObject: {fileID: 1990792864}
   m_SourcePrefab: {fileID: 100100000, guid: 4de3cd8c3459718438c00e0e5217b362, type: 3}
 --- !u!1 &7134781240715813590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
   m_PrefabInstance: {fileID: 5066515490001625885}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7134781240715813605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134781240715813590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b77fe43331afb4aa56e13761f482c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsCollectedText: {fileID: 792686894}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
