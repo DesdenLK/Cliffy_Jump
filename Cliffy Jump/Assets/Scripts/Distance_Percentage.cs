@@ -24,6 +24,7 @@ public class Distance_Percentage : MonoBehaviour
         for (int i = 0; i < miniLevels.Length; i++)
         {
             totalDistance += getTotalDistance(miniLevels[i].transform.Find("PointsPath").gameObject);
+            Debug.Log("Level " + i + " Distance: " + totalDistance);
         }
         lastPosition = player.transform.position;
     }
@@ -38,7 +39,7 @@ public class Distance_Percentage : MonoBehaviour
     void Update()
     {
         Vector3 temp1 = new Vector3(lastPosition.x, 0, lastPosition.z);
-        Vector3 temp2 = new Vector3(player.transform.transform.position.x, 0, player.transform.position.z);
+        Vector3 temp2 = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         currentDistance += Vector3.Distance(temp1, temp2);
         lastPosition = player.transform.position;
         percentage = (float)Math.Round((currentDistance / totalDistance) * 100, 1);

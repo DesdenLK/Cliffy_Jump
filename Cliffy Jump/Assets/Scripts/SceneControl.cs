@@ -25,7 +25,7 @@ public class SceneControl : MonoBehaviour
     {
         player = players[PlayerPrefs.GetInt("player")];
         player.SetActive(true);
-        player.GetComponent<PathFollower>().enabled = false;
+        player.GetComponent<PathFollowerDefault>().enabled = false;
         AutoJump = player.GetComponent<AutoJump>();
         initGround();
 
@@ -35,7 +35,7 @@ public class SceneControl : MonoBehaviour
 
     public void Reset()
     {
-        player.GetComponent<PathFollower>().enabled = false;
+        player.GetComponent<PathFollowerDefault>().enabled = false;
         
         playerInit = false;
         indexLevel = 0;
@@ -47,14 +47,14 @@ public class SceneControl : MonoBehaviour
     void initPlayer()
     {
         Transform[] path = getChildrenTransform(miniLevels[indexLevel].transform.Find("PointsPath").gameObject);
-        player.GetComponent<PathFollower>().Points = path;
+        player.GetComponent<PathFollowerDefault>().Points = path;
 
         Transform[] autoJump = getChildrenTransform(miniLevels[indexLevel].transform.Find("AutoJump").gameObject);
         player.GetComponent<AutoJump>().Points = autoJump;
 
-        player.GetComponent<PathFollower>().enabled = false;
+        player.GetComponent<PathFollowerDefault>().enabled = false;
 
-        player.GetComponent<PathFollower>().initPathFollower();
+        player.GetComponent<PathFollowerDefault>().initPathFollower();
         GetComponent<Distance_Percentage>().setPlayerPosition(player.transform);
         player.GetComponent<AutoJump>().initAutoJump();
 
@@ -62,7 +62,7 @@ public class SceneControl : MonoBehaviour
         {
             if (PathRise.isItFinished())
             {
-                player.GetComponent<PathFollower>().enabled = true;
+                player.GetComponent<PathFollowerDefault>().enabled = true;
                 playerInit = true;
                 PathRise.enabled = false;
                 Debug.Log("Player initialized");
@@ -76,7 +76,7 @@ public class SceneControl : MonoBehaviour
         if (!playerInit) initPlayer();
         else
         {
-            if (player.GetComponent<PathFollower>().isPlayerFinished())
+            if (player.GetComponent<PathFollowerDefault>().isPlayerFinished())
             {   
                 PathFalling.enabled = true;
                 if (PathFalling != null && PathFalling.isItFinished())
@@ -93,6 +93,7 @@ public class SceneControl : MonoBehaviour
                     {
                         setPercentage(100f);
                         Debug.Log("Game Over");
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelPassed");
                     }
                 }
             }
@@ -105,6 +106,18 @@ public class SceneControl : MonoBehaviour
         {
             AutoJump.setAutoJump(!AutoJump.getAutoJump());
             Debug.Log("AutoJump " + AutoJump.getAutoJump());
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            PlayerPrefs.SetInt("level", 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+            PlayerPrefs.SetInt("level", 1);
         }
     }
 

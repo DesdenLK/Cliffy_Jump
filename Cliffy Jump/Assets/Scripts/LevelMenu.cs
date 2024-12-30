@@ -26,10 +26,27 @@ public class LevelMenu : MonoBehaviour
         checkSelectedOption();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            PlayerPrefs.SetInt("level", 0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+            PlayerPrefs.SetInt("level", 1);
+        }
+    }
+
     public void LoadLevel()
     {
         // Load the selected level
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Level" + levelDropdown.value);
+        checkPlayerSelected();
         if (levelDropdown.value == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
         else UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
         PlayerPrefs.SetInt("level", levelDropdown.value);
