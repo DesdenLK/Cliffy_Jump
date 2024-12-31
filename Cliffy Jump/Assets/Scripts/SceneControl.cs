@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +20,8 @@ public class SceneControl : MonoBehaviour
 
     private int indexLevel = 0;
     private float[] percentages = new float[2];
+    private GameObject pauseMenu;
+
 
     bool playerInit = false;
     void Start()
@@ -31,6 +34,16 @@ public class SceneControl : MonoBehaviour
 
         miniLevels[indexLevel].SetActive(true);
         LoadArrayFromPlayerPrefs();
+        GameObject sceneManager = GameObject.Find("SceneManager");
+        if (sceneManager != null)
+        {
+            Transform pauseTransform = sceneManager.transform.Find("Pause");
+            if (pauseTransform != null)
+            {
+                pauseMenu = pauseTransform.gameObject;
+            }
+
+        }
     }
 
     public void Reset()
@@ -73,6 +86,19 @@ public class SceneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+            }
+            else
+            {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+            }
+        }
         if (!playerInit) initPlayer();
         else
         {
@@ -187,5 +213,12 @@ public class SceneControl : MonoBehaviour
     public GameObject getPlayer()
     {
         return player;
+    }
+
+
+    public void LoadMenu()
+    {
+        Time.timeScale = 1;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelMenu");
     }
 }
