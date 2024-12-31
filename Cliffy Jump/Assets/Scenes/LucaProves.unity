@@ -52571,13 +52571,13 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 57eff53f2ab67ea4bbc67ed75d455091, type: 3}
   m_Resource: {fileID: 8300000, guid: 57eff53f2ab67ea4bbc67ed75d455091, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.6
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 217
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
