@@ -46,6 +46,9 @@ public class ArcadeJump : MonoBehaviour
     public void Jump()
     {
         jumpRequested = true;
+        isJumping = false;
+        isFrontFlipping = false;
+        flipAvailable = true;
     }
 
 
