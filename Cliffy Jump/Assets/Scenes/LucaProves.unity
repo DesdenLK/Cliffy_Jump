@@ -49304,6 +49304,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 55538314}
     m_Modifications:
     - target: {fileID: 1401750412626571165, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401750412626571165, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
@@ -49395,6 +49399,10 @@ PrefabInstance:
       propertyPath: SceneManager
       value: 
       objectReference: {fileID: 1526964666}
+    - target: {fileID: 6478319123587412199, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: m_Name
       value: Cat

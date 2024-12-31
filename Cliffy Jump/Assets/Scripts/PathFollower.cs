@@ -23,7 +23,7 @@ public class PathFollower : MonoBehaviour
             transform.position = Points[pointIndex].transform.position;
     }
 
-
+ 
     void Update()
     { 
         
