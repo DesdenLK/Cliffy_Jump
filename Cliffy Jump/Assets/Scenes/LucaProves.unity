@@ -1087,9 +1087,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa228b21a69a4446acc85b7a0a48435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 15
-  fallMultiplier: 3
-  frontFlipStartHeight: 3
+  jumpForce: 20
+  fallMultiplier: 1
+  frontFlipStartHeight: 1
   frontFlipTime: 0.25
 --- !u!114 &53266935
 MonoBehaviour:
@@ -56038,6 +56038,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 55538314}
     m_Modifications:
     - target: {fileID: 1401750412626571165, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401750412626571165, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401750412626571165, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 0}
@@ -56125,10 +56133,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3835080861783778545, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6256745000639907390, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: SceneManager
       value: 
       objectReference: {fileID: 1526964666}
+    - target: {fileID: 6478319123587412199, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478319123587412199, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
       propertyPath: m_Name
       value: Cat
@@ -56162,7 +56182,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
-      insertIndex: 11
+      insertIndex: 7
+      addedObject: {fileID: 7134781240715813606}
+    - targetCorrespondingSourceObject: {fileID: 8417816209031280411, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
+      insertIndex: 12
       addedObject: {fileID: 7134781240715813605}
   m_SourcePrefab: {fileID: 100100000, guid: 9759f75e54aedec4cb2634852e95e191, type: 3}
 --- !u!1001 &6487188449176441726
@@ -56456,6 +56479,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsCollectedText: {fileID: 792686894}
+--- !u!114 &7134781240715813606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134781240715813590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa228b21a69a4446acc85b7a0a48435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 20
+  fallMultiplier: 1
+  frontFlipStartHeight: 1
+  frontFlipTime: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
