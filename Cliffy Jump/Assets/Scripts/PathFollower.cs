@@ -17,7 +17,6 @@ public class PathFollower : MonoBehaviour
     void Start()
     {
         arcadeJump = GetComponent<ArcadeJump>();
-        Physics.gravity = new Vector3(0, -9.81f, 0);
         pointIndex = 0;
         if (Points.Length > 0)
             transform.position = Points[pointIndex].transform.position;

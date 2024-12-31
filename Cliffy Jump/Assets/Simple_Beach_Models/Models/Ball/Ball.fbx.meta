@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: fda5e074207fcdd4a84645177d0505dc
+AssetOrigin:
+  serializedVersion: 1
+  productId: 287370
+  packageName: Beach
+  packageVersion: 1.0
+  assetPath: Assets/Simple_Beach_Models/Models/Ball/Ball.fbx
+  uploadId: 671357
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -36,8 +43,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -127,10 +132,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 287370
-  packageName: Beach
-  packageVersion: 1.0
-  assetPath: Assets/Simple_Beach_Models/Models/Ball/Ball.fbx
-  uploadId: 671357
