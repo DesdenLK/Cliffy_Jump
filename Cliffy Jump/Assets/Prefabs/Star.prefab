@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5655801691940336926}
   - component: {fileID: 6875503155406001012}
   - component: {fileID: 4312391291834594216}
-  - component: {fileID: 3380569997563306758}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -111,16 +110,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3380569997563306758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4257743783205664743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8679cdc9595e07d4faacf1071f4da2b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  starPrefab: {fileID: 0}
