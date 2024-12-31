@@ -24,8 +24,11 @@ public class ArcadeJump : MonoBehaviour
 
 
     private float angleRotations;
-    
-    private AutoJump autoJump;
+
+    private AudioSource jumpSound;
+
+
+
 
     public bool IsFrontFlipping
     {
@@ -39,7 +42,10 @@ public class ArcadeJump : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         Physics.gravity = new Vector3(0, 6*-9.81f, 0);
         flipAxis = new Vector3(1f, 0f, 0f);
-        autoJump = GetComponent<AutoJump>();
+        jumpSound = gameObject.AddComponent<AudioSource>();
+        jumpSound.clip = Resources.Load<AudioClip>("Sounds/Jump");
+        jumpSound.playOnAwake = false;
+        jumpSound.loop = false;
     }
 
 
@@ -83,6 +89,7 @@ public class ArcadeJump : MonoBehaviour
     {
         if (jumpRequested)
         {
+            jumpSound.Play();
             isGrounded = false;             // Ya no esta en el suelo
             isJumping = true;               // Empieza a saltar
             initialY = transform.position.y; // Guarda la posicion inicial

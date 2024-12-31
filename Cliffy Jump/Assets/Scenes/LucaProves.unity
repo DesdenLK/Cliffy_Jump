@@ -55956,6 +55956,10 @@ PrefabInstance:
       propertyPath: SceneManager
       value: 
       objectReference: {fileID: 1526964666}
+    - target: {fileID: 9164952161114995050, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
+      propertyPath: deathsoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: accf3ddce38574d4fa056bbddd94f97f, type: 3}
     m_RemovedComponents:
     - {fileID: 3765672444973805566, guid: d69ac1957f968ee468581391fc8dc817, type: 3}
     m_RemovedGameObjects: []
