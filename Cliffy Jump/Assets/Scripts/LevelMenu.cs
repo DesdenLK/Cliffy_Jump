@@ -47,8 +47,8 @@ public class LevelMenu : MonoBehaviour
         // Load the selected level
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Level" + levelDropdown.value);
         checkPlayerSelected();
-        if (levelDropdown.value == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
-        else UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+        if (levelDropdown.value == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+        else UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
         PlayerPrefs.SetInt("level", levelDropdown.value);
     }
 
