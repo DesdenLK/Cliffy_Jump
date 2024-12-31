@@ -2628,8 +2628,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &108164989
@@ -2644,7 +2644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -6862,8 +6862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &243234427
@@ -6878,7 +6878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -9015,8 +9015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &320481091
@@ -9031,7 +9031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -14991,7 +14991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -15007,8 +15007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!1 &558493261
@@ -15104,8 +15104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &558493264
@@ -15120,7 +15120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -21697,8 +21697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &777441097
@@ -21713,7 +21713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -24101,8 +24101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &851577307
@@ -24117,7 +24117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -24269,8 +24269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &856567871
@@ -24285,7 +24285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -33444,7 +33444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 4
-  fallHeight: -20
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!114 &1273074118
@@ -39036,7 +39036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60171b85c1499db41b650457b8121680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riseSpeed: 2
+  riseSpeed: 4
   riseHeight: 0
   isRising: 1
   isFinished: 0
@@ -39052,8 +39052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e84454db3326142b3f1042367c34d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
-  fallHeight: -7
+  fallSpeed: 4
+  fallHeight: -12
   isFalling: 1
   isFinished: 0
 --- !u!4 &1475025407 stripped

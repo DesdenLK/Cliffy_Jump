@@ -11,8 +11,8 @@ public class LevelFailed : MonoBehaviour
     }
     public void Retry()
     {
-        if (PlayerPrefs.GetInt("level") == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
-        else UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+        if (PlayerPrefs.GetInt("level") == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+        else UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
     }
     public void BackToMenu()
     {
