@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell1");
             PlayerPrefs.SetInt("level", 1);
         }
     }
