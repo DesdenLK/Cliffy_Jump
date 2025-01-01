@@ -15,6 +15,7 @@ public class AutoJump : MonoBehaviour
     {
         arcadeJump = player.GetComponent<ArcadeJump>();
         pointIndex = 0;
+        
     }
 
     // Update is called once per frame
