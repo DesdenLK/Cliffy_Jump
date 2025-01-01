@@ -42,6 +42,11 @@ public class LevelMenu : MonoBehaviour
         }
     }
 
+    public void loadMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
+
     public void LoadLevel()
     {
         // Load the selected level
