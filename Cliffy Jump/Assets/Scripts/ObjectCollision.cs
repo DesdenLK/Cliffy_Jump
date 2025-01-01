@@ -9,6 +9,8 @@ public class ObjectCollision : MonoBehaviour
     public ParticleSystem particles;
     public Animator Animator;
 
+    private AudioSource deathSound;
+
     private PathFollower PathFollower;
 
     private bool particlesPlayed = false;
@@ -19,6 +21,8 @@ public class ObjectCollision : MonoBehaviour
         PathFollower = GetComponent<PathFollower>();
         SceneControl = SceneManager.GetComponent<SceneControl>();
         Distance_Percentage = SceneManager.GetComponent<Distance_Percentage>();
+        deathSound = gameObject.AddComponent<AudioSource>();
+        deathSound.clip = Resources.Load<AudioClip>("Sounds/Death");
     }
 
     void Update()
@@ -34,14 +38,10 @@ public class ObjectCollision : MonoBehaviour
         // Verifica si el objeto tiene el tag "Object"
         if (collision.gameObject.CompareTag("Object"))
         {
-            PathFollower.enabled = false;
-            float percentage = Distance_Percentage.getPercentage();
-            Debug.Log("Percentage: " + percentage);
-            if (percentage > SceneControl.getPercentage())
+            if (deathSound != null)
             {
-                SceneControl.setPercentage(percentage);
+                deathSound.Play();
             }
-            PlayerPrefs.SetFloat("percentage", percentage);
             if (particles != null)
             {
                 particles.Play();
@@ -51,6 +51,15 @@ public class ObjectCollision : MonoBehaviour
             {
                 Animator.SetTrigger("Destroy");
             }
+            PathFollower.enabled = false;
+            float percentage = Distance_Percentage.getPercentage();
+            Debug.Log("Percentage: " + percentage);
+            if (percentage > SceneControl.getPercentage())
+            {
+                SceneControl.setPercentage(percentage);
+            }
+            PlayerPrefs.SetFloat("percentage", percentage);
+            
             //UnityEngine.SceneManagement.SceneManager.LoadScene("LevelFailed");
 
         }
