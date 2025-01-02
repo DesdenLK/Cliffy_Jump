@@ -12,7 +12,7 @@ public class LevelFailed : MonoBehaviour
     public void Retry()
     {
         if (PlayerPrefs.GetInt("level") == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell1");
-        else UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+        else UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
     }
     public void BackToMenu()
     {

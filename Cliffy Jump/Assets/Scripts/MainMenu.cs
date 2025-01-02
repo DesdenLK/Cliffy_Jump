@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
             PlayerPrefs.SetInt("level", 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))

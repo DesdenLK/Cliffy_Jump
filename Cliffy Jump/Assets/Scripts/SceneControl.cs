@@ -10,7 +10,6 @@ public class SceneControl : MonoBehaviour
     private GameObject player;
 
     private Rigidbody[] birds;
-    private bool[] birdsJumped;
 
 
     public GameObject[] miniLevels; 
@@ -145,7 +144,7 @@ public class SceneControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
             PlayerPrefs.SetInt("level", 1);
         }
     }
@@ -159,12 +158,12 @@ public class SceneControl : MonoBehaviour
                 Vector3 birdPos = new Vector3(birds[i].transform.position.x, 0, birds[i].transform.position.z);
                 Vector3 playerPos = new Vector3(player.transform.position.x, 0, player.transform.position.z);
                 float distance = Vector3.Distance(birdPos, playerPos);
-                if (distance <= 5f && birds[i].linearVelocity.y == 0 && !birdsJumped[i])
+                if (distance <= 5f && birds[i].linearVelocity.y == 0)
                 {
                     Debug.Log("Bird " + i + " Jump");
                     //birds[i].AddForce(Vector3.up * 70, ForceMode.Acceleration);
                     birds[i].linearVelocity = new Vector3(0, 50, 0);
-                    birdsJumped[i] = true;
+                    
                 }
             }
         }
@@ -188,7 +187,7 @@ public class SceneControl : MonoBehaviour
         if (birdsTransform != null)
         {
             birds = birdsTransform.GetComponentsInChildren<Rigidbody>();
-            birdsJumped = new bool[birds.Length];
+            
         }
         Debug.Log("Birds: " + birds.Length);
         return birds;

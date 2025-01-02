@@ -4,6 +4,7 @@ using UnityEngine;
 public class PathFollower : MonoBehaviour
 {
     private ArcadeJump arcadeJump;
+    private TrailRenderer trailRenderer;
 
     public Transform[] Points;
 
@@ -17,9 +18,17 @@ public class PathFollower : MonoBehaviour
     void Start()
     {
         arcadeJump = GetComponent<ArcadeJump>();
+        trailRenderer = GetComponent<TrailRenderer>();
+
         pointIndex = 0;
         if (Points.Length > 0)
+        {
             transform.position = Points[pointIndex].transform.position;
+            if (trailRenderer != null)
+            {
+                trailRenderer.enabled = true;
+            }
+        }
     }
 
  
@@ -46,6 +55,10 @@ public class PathFollower : MonoBehaviour
             if (pointIndex == Points.Length)
             {
                 playerFinished = true;
+                if (trailRenderer != null)
+                {
+                    trailRenderer.enabled = false;
+                }
             }
         }
 
@@ -66,5 +79,9 @@ public class PathFollower : MonoBehaviour
         pointIndex = 0;
         transform.position = Points[pointIndex].transform.position;
         playerFinished = false;
+        if (trailRenderer != null)
+        {
+            trailRenderer.enabled = true;
+        }
     }
 }
