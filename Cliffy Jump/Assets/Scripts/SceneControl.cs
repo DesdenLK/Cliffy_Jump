@@ -9,6 +9,8 @@ public class SceneControl : MonoBehaviour
     public GameObject[] players;
     private GameObject player;
 
+    private Rigidbody[] birds;
+
 
     public GameObject[] miniLevels; 
 
@@ -21,6 +23,7 @@ public class SceneControl : MonoBehaviour
     private int indexLevel = 0;
     private float[] percentages = new float[2];
     private GameObject pauseMenu;
+
 
 
     bool playerInit = false;
@@ -99,7 +102,7 @@ public class SceneControl : MonoBehaviour
                 pauseMenu.SetActive(true);
             }
         }
-        if (!playerInit) initPlayer();
+        if (!playerInit) {initPlayer(); getBirds(); }
         else
         {
             if (player.GetComponent<PathFollower>().isPlayerFinished())
@@ -120,6 +123,7 @@ public class SceneControl : MonoBehaviour
                         setPercentage(100f);
                         //Debug.Log("Game Over");
                         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelPassed");
+
                     }
                 }
             }
@@ -136,14 +140,34 @@ public class SceneControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell1");
             PlayerPrefs.SetInt("level", 0);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("AlbertProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
             PlayerPrefs.SetInt("level", 1);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (playerInit && birds.Length != 0)
+        {
+            for (int i = 0; i < birds.Length; i++)
+            {
+                Vector3 birdPos = new Vector3(birds[i].transform.position.x, 0, birds[i].transform.position.z);
+                Vector3 playerPos = new Vector3(player.transform.position.x, 0, player.transform.position.z);
+                float distance = Vector3.Distance(birdPos, playerPos);
+                if (distance <= 5f && birds[i].linearVelocity.y == 0)
+                {
+                    Debug.Log("Bird " + i + " Jump");
+                    //birds[i].AddForce(Vector3.up * 70, ForceMode.Acceleration);
+                    birds[i].linearVelocity = new Vector3(0, 50, 0);
+                    
+                }
+            }
         }
     }
 
@@ -155,6 +179,20 @@ public class SceneControl : MonoBehaviour
         PathFalling = Ground.GetComponent<PathFalling>();
         PathFalling.enabled = false;
 
+    }
+
+    private Rigidbody[] getBirds()
+    {
+        Transform birdsTransform = miniLevels[indexLevel].transform.Find("Ground").Find("Birds");
+        birds = new Rigidbody[0];
+        
+        if (birdsTransform != null)
+        {
+            birds = birdsTransform.GetComponentsInChildren<Rigidbody>();
+            
+        }
+        Debug.Log("Birds: " + birds.Length);
+        return birds;
     }
 
     Transform[] getChildrenTransform(GameObject parent)
@@ -214,7 +252,6 @@ public class SceneControl : MonoBehaviour
     {
         return player;
     }
-
 
     public void LoadMenu()
     {

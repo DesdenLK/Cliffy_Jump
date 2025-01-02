@@ -26,6 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivell1.unity
     guid: 5f7a59a92818d3647a80f6503c5c5685
+  - enabled: 1
+    path: Assets/Scenes/Nivell2.unity
+    guid: 4eb2f286d3bf95246bcc09fb0d0dc42c
+  - enabled: 1
+    path: Assets/Scenes/AlbertProves.unity
+    guid: 08fe6dbdbedb3804699903ffc94ab720
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b791b6de14ddc2547a8062c1752e8dfe, type: 2}

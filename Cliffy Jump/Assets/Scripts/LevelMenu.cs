@@ -28,13 +28,13 @@ public class LevelMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
             PlayerPrefs.SetInt("level", 0);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             //UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
             UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell1");
@@ -53,7 +53,7 @@ public class LevelMenu : MonoBehaviour
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Level" + levelDropdown.value);
         checkPlayerSelected();
         if (levelDropdown.value == 0) UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell1");
-        else UnityEngine.SceneManagement.SceneManager.LoadScene("LucaProves");
+        else UnityEngine.SceneManagement.SceneManager.LoadScene("Nivell2");
         PlayerPrefs.SetInt("level", levelDropdown.value);
     }
 

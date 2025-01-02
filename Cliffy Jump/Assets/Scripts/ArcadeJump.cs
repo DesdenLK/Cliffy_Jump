@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ArcadeJump : MonoBehaviour
 {
@@ -118,6 +119,7 @@ public class ArcadeJump : MonoBehaviour
     void UpdateGrounded()
     {
         float groundCheckDistance = 0.55f; // Distancia para detectar el suelo
+        if  (PlayerPrefs.HasKey("player") && PlayerPrefs.GetInt("player") == 2) groundCheckDistance = 0.8f;
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance);
 
         if (isGrounded)
