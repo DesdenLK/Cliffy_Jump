@@ -25,6 +25,7 @@ public class SceneControl : MonoBehaviour
     private GameObject pauseMenu;
 
 
+
     bool playerInit = false;
     void Start()
     {
@@ -122,6 +123,7 @@ public class SceneControl : MonoBehaviour
                         setPercentage(100f);
                         //Debug.Log("Game Over");
                         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelPassed");
+
                     }
                 }
             }

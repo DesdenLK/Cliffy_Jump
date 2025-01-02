@@ -4,10 +4,16 @@ using UnityEngine.UI;
 public class LevelFailed : MonoBehaviour
 {
     public Text percentageText;
+    private AudioSource levelFailedSound;
 
     public void Start()
     {
         percentageText.text = "You passed " + PlayerPrefs.GetFloat("percentage") + "% of the level";
+        levelFailedSound = gameObject.AddComponent<AudioSource>();
+        levelFailedSound.clip = Resources.Load<AudioClip>("Sounds/levelFailed");
+        levelFailedSound.playOnAwake = false;
+        levelFailedSound.loop = false;
+        levelFailedSound.Play();
     }
     public void Retry()
     {
