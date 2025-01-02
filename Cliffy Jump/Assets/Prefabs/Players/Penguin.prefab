@@ -191,8 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 60
-  maxJumpHeight: 0
-  moveSpeed: 10
+  fallMultiplier: 0
   frontFlipStartHeight: 2
   frontFlipTime: 0.25
 --- !u!114 &3795732734608883175
@@ -262,7 +261,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: d2d127d11b717d8479d9085ebd9061b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
