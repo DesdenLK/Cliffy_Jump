@@ -3307,7 +3307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &136673348
 Transform:
   m_ObjectHideFlags: 0
@@ -6566,6 +6566,7 @@ Transform:
   - {fileID: 735770250}
   - {fileID: 538309387}
   - {fileID: 1269156568}
+  - {fileID: 1980144748}
   m_Father: {fileID: 1051869425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &243234426
@@ -26172,7 +26173,6 @@ Transform:
   - {fileID: 243234425}
   - {fileID: 839623710}
   - {fileID: 1582862643}
-  - {fileID: 1980144748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1063478230
@@ -47194,7 +47194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980144747}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47202,7 +47202,7 @@ Transform:
   - {fileID: 597697658}
   - {fileID: 1743976199}
   - {fileID: 1985597909}
-  m_Father: {fileID: 1051869425}
+  m_Father: {fileID: 243234425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1985597908
 PrefabInstance:
@@ -51949,6 +51949,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2109926754}
     m_Modifications:
     - target: {fileID: 569138945530871435, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 569138945530871435, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 1197798488}
@@ -51965,6 +51969,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 93141035}
     - target: {fileID: 1068505306420541323, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068505306420541323, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 1197798488}
@@ -51981,6 +51989,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 93141035}
     - target: {fileID: 2504226240823101599, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2504226240823101599, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 1197798488}
@@ -51997,6 +52009,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 93141035}
     - target: {fileID: 3629279984448937316, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629279984448937316, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
       objectReference: {fileID: 1197798488}
@@ -52012,6 +52028,10 @@ PrefabInstance:
       propertyPath: 'Points.Array.data[3]'
       value: 
       objectReference: {fileID: 93141035}
+    - target: {fileID: 4267461471182109598, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4267461471182109598, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
       value: 
@@ -52031,6 +52051,10 @@ PrefabInstance:
     - target: {fileID: 5152510706798743596, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: m_Name
       value: ParkingWCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 6654531642734884615, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6654531642734884615, guid: 976a62868fa4e4745ac26c964689898e, type: 3}
       propertyPath: 'Points.Array.data[0]'
