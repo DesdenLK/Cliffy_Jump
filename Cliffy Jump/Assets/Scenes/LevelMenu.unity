@@ -3378,7 +3378,7 @@ MonoBehaviour:
   selectPlayer: {fileID: 781042812}
   levelImage: {fileID: 1204562312}
   levelSprite:
-  - {fileID: 21300000, guid: 2e92c8c9315eb57409045440ca9dfcf4, type: 3}
+  - {fileID: 21300000, guid: 480c24c1ea6287d43b085ca191086cf2, type: 3}
   - {fileID: 21300000, guid: 3474cdc24affe6d4dbd4809c227c471c, type: 3}
   percentageText: {fileID: 225208028}
 --- !u!114 &2059704757
