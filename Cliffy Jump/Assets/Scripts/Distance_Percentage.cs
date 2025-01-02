@@ -42,7 +42,7 @@ public class Distance_Percentage : MonoBehaviour
         Vector3 temp2 = new Vector3(player.transform.position.x, 0, player.transform.position.z);
         currentDistance += Vector3.Distance(temp1, temp2);
         lastPosition = player.transform.position;
-        percentage = (float)Math.Round((currentDistance / totalDistance) * 100, 1);
+        percentage = Math.Min((float)Math.Round((currentDistance / totalDistance) * 100, 1), 100f);
         percentageText.text = "Percentage: " + percentage + "%";
         //Debug.Log("Percentage: " + percentage);
         //Debug.Log("Current Distance: " + currentDistance);
